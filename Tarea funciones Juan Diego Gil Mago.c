@@ -11,16 +11,19 @@ int Div(int a, int b);
 int main() {
 
     int num1, num2, menu;
+    //Primero agarra los 2 valores que se quieren trabajar
     printf("Porfavor Ingrese los 2 valores a trabajar\n Valor 1:  ");
     scanf("%d", &num1);
     printf("\nValor 2: ");
     scanf("%d", &num2);
     do{
+        //Este do while es para que coloque el menu y se pueda reiniciar el menu si se coloca una opcion erronea
         printf("Porfavor coloque el numero el cual indique la opecacion que desea realizar:");
         printf("\n 1. Suma \n 2. Resta \n 3. Multiplicacion \n 4. Division\n 5. Terminar Programa\n");
         scanf("%d", &menu);
 
         //Swich se usa para generar un menu, al parecer es mejor que hacerlo en bucles
+        //Cuando se coloca el valor que se quiera, el swich pone un printf q trabaja la funcion seleccionada 
         switch(menu){
             case 1:
                 printf("El valor de la suma de %d y %d es: %d\n ", num1, num2, Sum(num1, num2));
@@ -42,6 +45,7 @@ int main() {
     } while(menu != 5);
     return 0;
 }
+//Las 4 funciones se trabajaran aqui 
 int Sum (int a, int b){
     int resultado;
     resultado = a + b;
